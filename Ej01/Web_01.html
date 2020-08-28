@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id ="tema" class="claro">
+    <head>
+        <title>Our site</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <link rel = "stylesheet" href="CSS/Styles.css"/>
+    </head>
+    <body>
+        <nav>
+            <div class = "logo"><img src="IMG/logo.png"></div>
+            <a href="#"><div class = "element">Home</div></a>
+            <a href="#"><div  class = "element">About</div></a>
+            <a href="#"><div class = "element">Services</div></a>
+            <a href="#"><div class = "element">Contact</div></a>
+        </nav>
+        <div class="selector">
+            <a onclick="myFunctionClaro()">Claro</a> | <a onclick="myFunctionOscuro()">Obscuro</a>
+        </div>
+        <div class = "cuerpo">
+            <div>
+                <h2>Colum 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mi mauris, tincidunt vel arcu eu, aliquam tristique arcu. Aliquam velit libero, lacinia sit amet egestas nec, tincidunt et nisi. Phasellus laoreet neque libero, et porttitor orci ullamcorper quis. Nunc feugiat ornare augue nec pretium. Duis placerat interdum purus, sit amet scelerisque metus facilisis ut. Etiam mollis nec odio dignissim vestibulum. Nam pharetra pulvinar sem finibus placerat. Nunc molestie ultrices aliquam. Donec cursus a lectus cursus gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus elementum tempor ipsum id malesuada. Vivamus pulvinar arcu ligula, eget bibendum purus faucibus in.
+                </p>
+                <img src = "IMG/imagen1.jpg" style="width: 100%;">
+            </div>
+            <div>
+                <h2>Colum 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mi mauris, tincidunt vel arcu eu, aliquam tristique arcu. Aliquam velit libero, lacinia sit amet egestas nec, tincidunt et nisi. Phasellus laoreet neque libero, et porttitor orci ullamcorper quis. Nunc feugiat ornare augue nec pretium. Duis placerat interdum purus, sit amet scelerisque metus facilisis ut. Etiam mollis nec odio dignissim vestibulum. Nam pharetra pulvinar sem finibus placerat. Nunc molestie ultrices aliquam. Donec cursus a lectus cursus gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus elementum tempor ipsum id malesuada. Vivamus pulvinar arcu ligula, eget bibendum purus faucibus in.
+                </p>
+            </div>
+            <div>
+                <h2>Colum 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mi mauris, tincidunt vel arcu eu, aliquam tristique arcu. Aliquam velit libero, lacinia sit amet egestas nec, tincidunt et nisi. Phasellus laoreet neque libero, et porttitor orci ullamcorper quis. Nunc feugiat ornare augue nec pretium. Duis placerat interdum purus, sit amet scelerisque metus facilisis ut. Etiam mollis nec odio dignissim vestibulum. Nam pharetra pulvinar sem finibus placerat. Nunc molestie ultrices aliquam. Donec cursus a lectus cursus gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus elementum tempor ipsum id malesuada. Vivamus pulvinar arcu ligula, eget bibendum purus faucibus in.
+                </p>
+            </div>
+        </div>
+        <div class = "footer">
+            Copyright 2020 all Rights Reseved
+        </div>
+        <script type="text/javascript">
+            function myFunctionOscuro() {
+                var element = document.getElementById("tema");
+                element.classList.remove("claro");
+                element.classList.add("oscuro");
+            }
+            function myFunctionClaro() {
+                var element = document.getElementById("tema");
+                element.classList.remove("oscuro");
+                element.classList.add("claro");
+            }
+        </script>
+    </body>
+</html>
