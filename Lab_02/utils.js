@@ -1,5 +1,5 @@
 function get_element_li (name, weight) {
-    return `<li class="added-item">Pokemon: ${name} weight:<span class="pokeWeight"> ${weight}</span>   <button class="remove-item">remove</button></li>`
+    return `<li class="added-item"><img class = "img"> Pokemon: ${name} weight:<span class="pokeWeight"> ${weight}</span>   <button class="remove-item">remove</button></li>`
 }
 
 let total = 0;
@@ -16,7 +16,7 @@ function Recalculate () {
     document.getElementById("total").innerHTML = `Total: ${total}`;
 }
 
-let add_item_to_list_with_template = (pokeName, pokeWeight) => {
+let add_item_to_list_with_template = (pokeName, pokeWeight, photo) => {
     //let itemValue = document.querySelector("#item-value").value.trim();
     let liVal = get_element_li(pokeName, pokeWeight);
     total += Number(pokeWeight);
@@ -25,6 +25,9 @@ let add_item_to_list_with_template = (pokeName, pokeWeight) => {
     let element = document.createElement("li");
     element.innerHTML = liVal;
     list.append(element);
+    //Add photo
+    let image = element.getElementsByClassName("img")[0];
+    image.src = photo;
     // add event listener to the button inside the element just added with the remove_item function
     let bttn = element.getElementsByClassName("remove-item")[0];
     bttn.addEventListener("click", remove_item());
@@ -34,7 +37,7 @@ let add_item_to_list_with_template = (pokeName, pokeWeight) => {
 
 let thenable_handle_for_the_result_of_the_pokemon_request = (result) => {
     //handle here the pokemon from the request+
-    add_item_to_list_with_template(result.data.species.name, result.data.weight)
+    add_item_to_list_with_template(result.data.species.name, result.data.weight, result.data.sprites.front_default)
 }
   
 let catchable_handle_for_the_error_of_the_pokemon_request = (err) => {
